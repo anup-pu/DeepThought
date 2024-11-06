@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Top Navigation Bar -->
+<div class="navbar">
+    <div class="logo"><img src="https://deepthought.education/assets/images/logo/logo.svg" alt="" height="50px"></div>
+    <div class="nav-links">
+        <a href="#"><img src="https://img.icons8.com/?size=100&id=2797&format=png&color=228BE6" alt="" height="25px"></a>
+        <a href="#"><img src="https://img.icons8.com/?size=100&id=2969&format=png&color=228BE6" alt="" height="25px"></a>
+        <a href="#"><img src="https://img.icons8.com/?size=100&id=fcG5IOptfh58&format=png&color=228BE6" alt="" height="25px"></a>
+        <a href="#"><img src="https://img.icons8.com/?size=100&id=7VaphJ6hRQa5&format=png&color=228BE6" alt="" height="25px"></a>
+        <a href="#"><img src="https://img.icons8.com/?size=100&id=S5biqohaDgd1&format=png&color=228BE6" alt="" height="25px"></a>
+    </div>
+</div>
+
+<!-- Main Content Area -->
+<div class="dashboard">
+    <!-- Journey Board -->
+    <div id="journeyBoard" class="journey-board">
+        <div class="journey-board-header" onclick="toggleJourneyBoard()">Journey Board</div>
+        <div class="journey-board-content">
+            <ul>
+                <li>Technical Project Management</li>
+                <li>Threadbuild</li>
+                <li>Structure Your Pointers</li>
+                <li>4SA Method</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Dashboard Sections -->
+    <div class="main-content">
+        <!-- Title Section -->
+        <div class="title-section">
+            <h1>Technical Project Management <span><button class="submit-task-btn">Submit Task</button></span></h1>
+            
+            <p class="description">Explore the world of management</p>
+            <p class="description-details">As a project manager, you play an important role in leading a project through initiation, planning, execution, monitoring, controlling, and completion. How do you want to manage each and every step of your life?</p>
+        </div>
+
+        <!-- Individual Sections -->
+        <div class="section1">
+            <h2>Technical Project Management</h2>
+            <p>Description: Story of Alignment Scope & Agile Specific Accountable Staggering Approach.</p>
+            <iframe width="380" height="315" 
+        src="https://www.youtube.com/embed/TiMRwri1xJ8?autoplay=1&mute=1" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+        </div>
+
+    
+        <div class="section2">
+            <h2 class="section-title">Threadbuild</h2>
+            <p class="description">Description: Watch the video and threadbuild, and jot out key threads while watching the video.</p>
+            
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection('threadAContent')">Thread A</div>
+                <div id="threadAContent" class="collapsible-content">
+                    <div class="input-group">
+                        <label for="sub-thread">Sub-thread 1</label>
+                        <textarea id="sub-thread" placeholder="Enter text here"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="sub-interpretation">Sub-interpretation 1</label>
+                        <textarea id="sub-interpretation" placeholder="Enter text here"></textarea>
+                    </div>
+                    <button class="submit-btn">Submit Thread</button>
+                    <div class="summary">
+                        <label for="summary-thread">Summary for Thread A</label>
+                        <textarea id="summary-thread" placeholder="Enter text here"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="section3">
+            <h2>Structure Your Pointers</h2>
+            <p class="description">Description: Write a 300 - 400 word article from your thread. Publish your understanding and showcase your understanding to the entire world.</p>
+            <form class="pointer-form">
+                <label for="pointer-title">Title</label>
+                <input type="text" id="pointer-title" name="pointer-title" placeholder="Enter title here">
+        
+                <label for="pointer-content">Content</label>
+                <textarea id="pointer-content" name="pointer-content" placeholder="Enter your content here"></textarea>
+        
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+        
+
+        <div class="section4">
+            <h2 class="section-title">4SA Method</h2>
+            <p class="description">Description: To Explore more read more</p>
+            
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection('introduction')">Introduction</div>
+                <div id="introduction" class="collapsible-content">
+                    <p>The 4SA Method, How to bring an idea into progress?</p>
+                    <button class="see-more-btn">See More</button>
+                </div>
+            </div>
+        
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection('threadA')">Thread A</div>
+                <div id="threadA" class="collapsible-content">
+                    <p>How are you going to develop your strategy? Which method will you use? What if the project is lengthy?</p>
+                    <button class="see-more-btn">See More</button>
+                </div>
+            </div>
+        
+            <div class="collapsible-section">
+                <div class="collapsible-header">Example 1</div>
+                <div class="collapsible-content">
+                    <p>You have a concept. How will you put it into progress?</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Notice Board -->
+<div class="notice-board" onclick="toggleNoticeBoard()">Notice Board</div>
+
+<!-- Floating Menu at Bottom Right -->
+<div class="floating-menu">
+    <button>?</button>
+    <button>📝</button>
+    <button>📅</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

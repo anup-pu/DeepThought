@@ -1,0 +1,381 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #0040d8;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+}
+
+.journey-board {
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: width 0.3s ease;
+}
+
+.journey-board.expanded {
+    width: 300px;
+}
+
+.journey-board-header {
+    background-color: #002a80;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.journey-board-content {
+    padding: 15px;
+    display: none;
+}
+
+.journey-board.expanded .journey-board-content {
+    display: block;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.title-section {
+    grid-column: span 2;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.submit-task-btn{
+    margin-left: 300px;
+}
+
+.title-section h1 {
+    color: #0040d8;
+    justify-content: space-between;
+}
+
+.description {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.description-details {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.submit-task-btn {
+    background-color: #0040d8;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.section1, .section2, .section3, .section4 {
+    background-color: #ffffff;
+    /* position: absolute; */
+    width: 450px;
+    height: 550px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+/* Styles for the Threadbuild section */
+.section2 {
+    background-color: #ffffff;
+    width: 450px;
+    height: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+}
+
+.collapsible-content {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border-left: 2px solid #ddd;
+    margin-top: 5px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-group textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #002a80;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #0040d8;
+}
+
+.summary {
+    margin-top: 15px;
+}
+
+/* Styling for Structure Your Pointers section */
+.section3 {
+    background-color: #FDFDFD;
+    width: 450px;
+    height: 550px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
+    position: relative;
+    color: #333;
+}
+
+.section3 h2 {
+    font-size: 18px;
+    color: #000; /* Black heading color */
+    margin-bottom: 10px;
+}
+
+.section3 .description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.pointer-form label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+.pointer-form input[type="text"],
+.pointer-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.pointer-form textarea {
+    height: 120px;
+}
+
+.submit-btn {
+    background-color: #002a80;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #0040d8;
+}
+
+
+
+
+
+.section h2 {
+    font-size: 18px;
+    color: #0040d8;
+}
+/* Styles for the 4SA Method section */
+.section4 {
+    background-color: #ffffff;
+    width: 450px;
+    height: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 18px;
+    color: #000; /* Set title color to black */
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.collapsible-section {
+    margin-top: 10px;
+}
+
+.collapsible-header {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000; /* Set header color to black */
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collapsible-content {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border-left: 2px solid #ddd;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.see-more-btn {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    margin-top: 5px;
+}
+
+
+.submit-btn {
+    margin-top: 10px;
+    background-color: #002a80;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+    /* Notice Board styling */
+.notice-board {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 50px;
+    height: 200px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.notice-text {
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+/* Floating Menu */
+.floating-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.floating-menu button {
+    width: 50px;
+    height: 50px;
+    background-color: #0040d8;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+}
